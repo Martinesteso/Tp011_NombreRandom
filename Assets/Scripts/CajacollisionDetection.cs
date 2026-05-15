@@ -13,7 +13,7 @@ public class CajacollisionDetection : MonoBehaviour
     void Start()
     {
         posicionInicial = transform.position;
-         cajaMovement = GetComponent<CajaMovement>();
+        cajaMovement = GetComponent<CajaMovement>();
     }
 
     // Update is called once per frame
@@ -28,6 +28,7 @@ public class CajacollisionDetection : MonoBehaviour
         {
             Destroy(col.gameObject);
             ugui.txt_perdiste.gameObject.SetActive(true);
+            ugui.contando = false;
         }else if(col.gameObject.CompareTag("piso"))
         
         {
